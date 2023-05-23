@@ -1,4 +1,4 @@
-# howto
+# How to...
 
 ## How to make a symlink private_html to public_html.
 ```
