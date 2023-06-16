@@ -2,10 +2,10 @@
 
 ### ... make a symlink private_html to public_html.
 ```console
-// remove private_html dir
+# remove private_html dir
 rm -r private_html
 
-// make symlink
+# make symlink
 ln -s public_html private_html
 ```
 
