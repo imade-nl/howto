@@ -22,7 +22,7 @@ git tag -d tagName
 
 ### ... fetch and display Laravel validation errors
 ```javascript
-ages = [];
+this.errorMessages = [];
 
 fetch('/api/registrants/store', {
     method: 'POST',
