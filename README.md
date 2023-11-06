@@ -19,3 +19,36 @@ git push origin :refs/tags/12345
 git push --delete origin tagName
 git tag -d tagName
 ```
+
+### ... fetch and display Laravel validation errors
+```javascript
+ages = [];
+
+fetch('/api/registrants/store', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': this.$refs.token.value
+    },
+    body: JSON.stringify(this.form)
+})
+.then(function(response) {
+    if (response.ok) {
+        return response.json();
+    }
+
+    return Promise.reject(response);
+})
+.then(json => {
+    this.form.ref = json.ref
+    this.step++;
+})
+.catch(response => {
+    response.json().then((json) => {
+        for (const [key, values] of Object.entries(json.errors)) {
+            this.errorMessages.push(values[0])
+        }
+    })
+})
+```
